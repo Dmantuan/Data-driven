@@ -5,3 +5,31 @@
 .form {
   --ion-background-color: #fff8c9; /* Substitua pela cor desejada */
 }
+
+.progress-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  color: #787485;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: #d0bfff;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    background-color: #614bb0;
+    color: white;
+  }
+}
+
+.line {
+  background-color: #787485;
+  height: 1px;
+  width: 3rem;
+}
