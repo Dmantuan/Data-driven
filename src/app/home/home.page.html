@@ -1,7 +1,20 @@
 <ion-content [fullscreen]="true" class="base">
-  <ion-card class="form">
+  <ion-card class="form pt-3">
+    <ion-card-title class="row progress-container">
+      <div class="circle" [ngClass]="index === 0 ? 'active' : ''">1</div>
+      <div class="line"></div>
+      <div class="circle" [ngClass]="index === 1 ? 'active' : ''">2</div>
+      <div class="line"></div>
+      <div class="circle" [ngClass]="index === 2 ? 'active' : ''">3</div>
+      <div class="line"></div>
+      <div class="circle" [ngClass]="index === 3 ? 'active' : ''">4</div>
+    </ion-card-title>
     <ion-card-content>
-      <swiper-container loop="false">
+      <swiper-container
+        id="swiper"
+        [loop]="false"
+        (swiperslidechange)="onSlideChange()"
+      >
         <swiper-slide>
           <app-dados-pessoais></app-dados-pessoais>
         </swiper-slide>
